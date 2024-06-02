@@ -1,0 +1,7 @@
+<h1>Restaurants index</h1>
+Actuellement, il y a <%= @restaurants.size%> restaurants répertoriés. 
+<ul>
+<% @restaurants.each do |restaurant| %>
+<li><%= restaurant.name%>, note moyenne = <%= restaurant.rating%> / 5</li>
+<% end%>
+</ul>
