@@ -3,4 +3,10 @@ Rails.application.routes.draw do
   # root "restaurants#index"
 
   get 'restaurants', to: 'restaurants#index'
+
+  namespace 'api' do
+    namespace 'v1' do
+      resources :restaurants
+    end
+  end
 end
